@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ivegaS6A.MainPage">
+
+    <StackLayout>
+        <Label Text="Consumir web service Get" FontSize="20" HorizontalTextAlignment="Center"/>
+        <Label x:Name="texto" Text=""/>
+        <Button Text="Consultar" x:Name="btnGet" Clicked="btnGet_Clicked"/>
+        <Button Text="Insertar" x:Name="btnInsertar" Clicked="btnInsertar_Clicked"/>
+        <ListView x:Name="MyListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label x:Name="lblNombre" Text="{Binding nombre}"/>
+                            <Label x:Name="lblApellido" Text="{Binding apellido}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
